@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeByT.CDNet.DataAccess", "CodeByT.CDNet.DataAccess\CodeByT.CDNet.DataAccess.csproj", "{7B05E8A1-15FB-4124-8554-2688AF27AA07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeByT.CDNet.Controller", "CodeByT.CDNet.Controller\CodeByT.CDNet.Controller.csproj", "{37973F3F-1573-4AB2-BE9A-A20A9475C3F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeByT.CDNet.DependencyInjection", "CodeByT.CDNet.DependencyInjection\CodeByT.CDNet.DependencyInjection.csproj", "{8974F9FA-A5BB-4620-B560-F2C846079F3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeByT.CDNet.Services", "CodeByT.CDNet.Services\CodeByT.CDNet.Services.csproj", "{EAD7B481-7504-4182-9F76-71565F86900D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeByT.CDNet.Models", "CodeByT.CDNet.Models\CodeByT.CDNet.Models.csproj", "{23226691-8B0D-497C-908F-FE073E98A832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeByT.CDNet.Interfaces", "CodeByT.CDNet.Interfaces\CodeByT.CDNet.Interfaces.csproj", "{BADA239B-4157-4379-A2EE-8FD9DCA9C548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeByT.CDNet.Repositories", "CodeByT.CDNet.Repositories\CodeByT.CDNet.Repositories.csproj", "{D5F5B21D-653A-448B-859D-4547C7119965}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B05E8A1-15FB-4124-8554-2688AF27AA07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B05E8A1-15FB-4124-8554-2688AF27AA07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B05E8A1-15FB-4124-8554-2688AF27AA07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B05E8A1-15FB-4124-8554-2688AF27AA07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37973F3F-1573-4AB2-BE9A-A20A9475C3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37973F3F-1573-4AB2-BE9A-A20A9475C3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37973F3F-1573-4AB2-BE9A-A20A9475C3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37973F3F-1573-4AB2-BE9A-A20A9475C3F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8974F9FA-A5BB-4620-B560-F2C846079F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8974F9FA-A5BB-4620-B560-F2C846079F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8974F9FA-A5BB-4620-B560-F2C846079F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8974F9FA-A5BB-4620-B560-F2C846079F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAD7B481-7504-4182-9F76-71565F86900D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD7B481-7504-4182-9F76-71565F86900D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD7B481-7504-4182-9F76-71565F86900D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD7B481-7504-4182-9F76-71565F86900D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23226691-8B0D-497C-908F-FE073E98A832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23226691-8B0D-497C-908F-FE073E98A832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23226691-8B0D-497C-908F-FE073E98A832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23226691-8B0D-497C-908F-FE073E98A832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BADA239B-4157-4379-A2EE-8FD9DCA9C548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BADA239B-4157-4379-A2EE-8FD9DCA9C548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BADA239B-4157-4379-A2EE-8FD9DCA9C548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BADA239B-4157-4379-A2EE-8FD9DCA9C548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5F5B21D-653A-448B-859D-4547C7119965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F5B21D-653A-448B-859D-4547C7119965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F5B21D-653A-448B-859D-4547C7119965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F5B21D-653A-448B-859D-4547C7119965}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
