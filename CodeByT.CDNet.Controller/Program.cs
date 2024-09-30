@@ -1,5 +1,7 @@
 using System.Text.Json.Serialization;
 using CodeByT.CDNet.DependencyInjection.Extensions;
+using CodeByT.CDNet.Models.Exceptions;
+using static System.Int64;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,11 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<HttpResponseExceptionFilter>();
+});
 
 builder.Services.AddCors(options =>
 {
@@ -25,6 +32,11 @@ builder.Services.AddCors(options =>
 builder.Host.ConfigureServices((context, collection) =>
 {
     collection.RegisterCDNetServices(context.Configuration);
+});
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.MaxRequestBodySize = 104_857_600; // 100 MB, Limited By Cloudflare like this aswell
 });
 
 var app = builder.Build();

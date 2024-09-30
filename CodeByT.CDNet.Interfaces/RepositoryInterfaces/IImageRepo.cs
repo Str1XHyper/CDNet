@@ -4,6 +4,7 @@ namespace CodeByT.CDNet.Interfaces.RepositoryInterfaces;
 
 public interface IImageRepo
 {
-    public void AddImage(Image image);
-    public Image? GetImageById(Guid id);
+    public void AddImage(StoredImage storedImage);
+    public StoredImage? GetImageById(Guid id);
+    public void RemoveImage(Guid id);
 }

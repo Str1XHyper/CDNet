@@ -4,20 +4,18 @@ using CodeByT.CDNet.Models.Data_Models;
 
 namespace CodeByT.CDNet.Repositories;
 
-public class ImageRepo : IImageRepo
+public class ImageRepo(IDefaultContext ctx) : IImageRepo
 {
-    private readonly IDefaultContext _ctx;
-
-    public ImageRepo(IDefaultContext ctx)
+    public void AddImage(StoredImage storedImage)
     {
-        _ctx = ctx;
+        ctx.Images.Add(storedImage);
+        ctx.SaveChanges();
     }
 
-    public void AddImage(Image image)
+    public StoredImage? GetImageById(Guid id) => ctx.Images.FirstOrDefault(i => i.Id == id);
+    public void RemoveImage(Guid id)
     {
-        _ctx.Images.Add(image);
-        _ctx.SaveChanges();
+        ctx.Images.Remove(ctx.Images.FirstOrDefault(x => x.Id == id));
+        ctx.SaveChanges();
     }
-
-    public Image? GetImageById(Guid id) => _ctx.Images.FirstOrDefault(i => i.id == id);
 }

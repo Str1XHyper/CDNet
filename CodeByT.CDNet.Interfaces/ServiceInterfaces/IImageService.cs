@@ -6,6 +6,7 @@ namespace CodeByT.CDNet.Interfaces.ServiceInterfaces;
 
 public interface IImageService
 {
-    public string UploadImage(IFormFile image);
-    public Image? GetImageByID(Guid id);
+    StoredImage? GetImageByID(Guid id);
+    void DeleteImageById(Guid id);
+    string UploadImage(IFormFile image, bool cropped, int height, int width);
 }

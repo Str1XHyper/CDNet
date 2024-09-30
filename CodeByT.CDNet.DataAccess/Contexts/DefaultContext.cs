@@ -20,5 +20,5 @@ public class DefaultContext : DbContext, IDefaultContext
         // new TemplateSeeding().Init(builder);
     }
 
-    public DbSet<Image> Images { get; set; }
+    public DbSet<StoredImage> Images { get; set; }
 }

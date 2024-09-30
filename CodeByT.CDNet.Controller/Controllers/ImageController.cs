@@ -1,4 +1,6 @@
 ﻿using CodeByT.CDNet.Interfaces.ServiceInterfaces;
+using CodeByT.CDNet.Models.Enums;
+using CodeByT.CDNet.Models.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeByT.CDNet.Controller.Controllers;
@@ -21,9 +23,9 @@ public class ImageController : ControllerBase
 
     [HttpPost]
     [Route("upload")]
-    public IActionResult UploadImage(IFormFile image)
+    public IActionResult UploadImage(IFormFile image, bool cropped, int height = 2160, int width = 3840)
     {
-        var uri = _imageService.UploadImage(image);
+        var uri = _imageService.UploadImage(image, cropped, height, width);
         return Created(uri, null);
     }
     
@@ -32,8 +34,15 @@ public class ImageController : ControllerBase
     {
         var image = _imageService.GetImageByID(id);
         //TODO Add custom http exceptions
-        if (image is null) return NotFound();
-        var imageBytes = Convert.FromBase64String(image.base64);
-        return File(imageBytes, image.contentType);
+        if (image is null) throw new HttpResponseException(ExceptionType.NotFound);
+        var imageBytes = Convert.FromBase64String(image.Base64);
+        return File(imageBytes, image.ContentType);
+    }
+
+    [HttpDelete]
+    public IActionResult DeleteImageById(Guid id)
+    {
+        _imageService.DeleteImageById(id);
+        return Ok();
     }
 }

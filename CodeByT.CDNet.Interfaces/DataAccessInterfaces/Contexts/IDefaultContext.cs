@@ -7,5 +7,5 @@ namespace CodeByT.CDNet.Interfaces.DataAccessInterfaces.Contexts;
 
 public interface IDefaultContext : IDbContext
 {
-    public DbSet<Image> Images { get; set; }
+    public DbSet<StoredImage> Images { get; set; }
 }

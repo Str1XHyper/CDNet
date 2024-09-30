@@ -1,0 +1,39 @@
+version: '3.4'
+services:
+
+  cdnet-api:
+    build:
+      dockerfile: CodeByT.CDNet.Controller/Dockerfile
+    container_name: CDNet
+    image: str1xhyper/cdnet:latest
+    hostname: cdnet-api
+    ports:
+      - 0.0.0.0:12000:8080
+    expose:
+      - 8080
+    networks:
+      - cdnet
+
+  cdnet-mariadb:
+    hostname: cdnet-mariadb
+    container_name: cdnet-mariadb
+    image: mariadb:10.8
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_ROOT_PASSWORD: 'pwd'
+    ports:
+      - 3306:3306
+    expose:
+      - '3306'
+    volumes:
+      - cdnet-mariadb:/var/lib/mysql
+    networks:
+      - cdnet
+
+networks:
+  cdnet:
+
+
+volumes:
+  cdnet-mariadb:

@@ -7,13 +7,13 @@ public static class ModelMapping
 {
     public static void MapImages(this ModelBuilder builder)
     {
-        builder.Entity<Image>(e =>
+        builder.Entity<StoredImage>(e =>
         {
             e.ToTable("Images");
-            e.HasKey(p => p.id);
-            e.Property(p => p.base64);
-            e.Property(p => p.contentType);
-            e.Property(p => p.fileName);
+            e.HasKey(p => p.Id);
+            e.Property(p => p.Base64);
+            e.Property(p => p.ContentType);
+            e.Property(p => p.FileName);
         });
     }
 }
