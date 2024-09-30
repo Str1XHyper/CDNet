@@ -21,7 +21,7 @@ To get started with CDNet, follow the instructions below.
 
 Before using CDNet, ensure that the following dependencies are installed on your system:
 
-- .NET version 7
+- .NET version 8
 
 ### Installation
 
@@ -40,35 +40,6 @@ To use CDNet, follow the guidelines below.
 ```shell
 $ dotnet watch
 ```
-
-## API Specification
-
-The CDNet API provides the following endpoints:
-
-### `/image?id="id"`
-
-This endpoint retrieves an image with the specified `id`.
-
-- Method: GET
-- Parameters:
-  - `id` (string): The identifier of the image to retrieve.
-- Response:
-  - Success (200 OK): Returns the requested image.
-  - Not Found (404 Not Found): If the image with the specified `id` does not exist.
-
-### `/image/upload`
-
-This endpoint allows uploading an image to CDNet.
-
-- Method: POST
-- Parameters:
-  - `file` (binary): The image file to be uploaded.
-- Response:
-  - Success (201 Created): Returns the uploaded image URL.
-  - Bad Request (400 Bad Request): If the request is invalid or the file upload fails.
-
-Please ensure you provide the necessary authentication or authorization mechanisms for accessing the API endpoints.
-**note** at the moment no authentication is required
 
 ## Contributing
 
