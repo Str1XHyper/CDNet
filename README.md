@@ -8,7 +8,6 @@ CDNet is a Content Delivery Network (CDN) application built using DotNet. It is 
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [API Specification](#api-specification)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
